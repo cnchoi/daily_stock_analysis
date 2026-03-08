@@ -20,7 +20,7 @@ jobs:
           git config --global user.email "action@github.com"
           
           # 원본 저장소 등록
-          git remote add upstream https://github.com/cnchoi/daily_stock_analysis.git
+          git remote add upstream https://github.com/ZhuLinsen/daily_stock_analysis.git
           git fetch upstream
           
           # 브랜치 체크아웃 (이 저장소의 기본 브랜치명을 확인하세요. 보통 main입니다)
