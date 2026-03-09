@@ -2,7 +2,7 @@ name: Sync Upstream
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 매일 한국 시간 오전 9시 실행
+    - cron: '0 21 * * *' # 매일 한국 시간 오전 9시 실행
   workflow_dispatch:      # 수동 실행 버튼 활성화
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
           git checkout main
           
           # 원본의 main 내용을 내 main으로 병합
-          git merge upstream/main --allow-unrelated-histories
+          git merge upstream/main -X theirs --allow-unrelated-histories
           
           # 내 저장소로 푸시
           git push origin main
